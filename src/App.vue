@@ -20,6 +20,21 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  background-color: #e9e5e5;
+  /* margin-top: 60px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.jokes-container {
+  display: flex;
+  background-color: #fff;
+  color: #504b4b;
+  padding: 20px;
+  width: 400px;
+  height: 300px;
 }
 </style>
