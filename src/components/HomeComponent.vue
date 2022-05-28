@@ -1,10 +1,11 @@
 <template>
   <div class="jokes-container">
-    <h3>Welcome to Programmer Jokes</h3>
+    <h3 class="joke-title">Welcome to Jokes</h3>
     <hr />
     <div class="show-joke">
       {{ singleJoke }}
     </div>
+    <button @click="getAnotherJoke">Get Another Joke</button>
   </div>
 </template>
 
@@ -13,7 +14,7 @@ import axios from "axios";
 export default {
   data() {
     return {
-      jokeApiUrl: "https://v2.jokeapi.dev/joke/Programming?type=single",
+      jokeApiUrl: "https://v2.jokeapi.dev/joke/Any?type=single",
       singleJoke: "",
       jokeStatus: false,
     };
@@ -32,6 +33,9 @@ export default {
           });
         }
       });
+    },
+    getAnotherJoke() {
+      this.getSingleJoke();
     },
   },
   mounted() {
